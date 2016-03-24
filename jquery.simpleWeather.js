@@ -43,7 +43,7 @@
       $.getJSON(
         encodeURI(weatherUrl),
         function(data) {
-          if(data !== null && data.query !== null && data.query.results !== null && data.query.results.channel.description !== 'Yahoo! Weather Error') {
+          if(data && data.query && data.query.results && data.query.results.channel.description !== 'Yahoo! Weather Error') {
             var result = data.query.results.channel,
                 weather = {},
                 forecast,
